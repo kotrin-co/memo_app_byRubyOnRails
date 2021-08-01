@@ -6,6 +6,7 @@
         <div class="card text-white bg-warning mb-3">
           <div class="card-header">
             <%= memo.title %>
+            <%= memo.category.name %>
             <a href="/memos/<%=memo.id%>" data-method="delete"> 削除</a><a href="/memos/<%=memo.id%>/edit"> 編集</a>
           </div>
           <div class="card-body">

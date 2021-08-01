@@ -6,11 +6,12 @@ class MemosController < ApplicationController
 
   def new
     # 新規作成ページ
+    @categories = Category.all
   end
 
   def create
     # 新しいメモがポストされた時のアクション
-    Memo.create(title:params["memos"]["title"],body:params["memos"]["body"])
+    Memo.create(title:params["memos"]["title"],body:params["memos"]["body"],category_id:params["memos"]["category_id"])
     redirect_to "/"
   end
 
