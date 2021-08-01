@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>Memo List</h3>
+  <div class="row">
+    <% @memos.each do |memo| %>
+      <div class="col-sm-4">
+        <div class="card text-white bg-info mb-3">
+          <div class="card-header">
+            <%= memo.title %>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><%= memo.body %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
